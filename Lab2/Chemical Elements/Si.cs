@@ -1,8 +1,11 @@
 ﻿namespace Lab2
 {
-    internal class Si
+    public class Si
     {
         // Vm [sm^3/mole]
-        public readonly static double MolarVolume = 12.1;
+        private const double MolarVolume = 12.1;
+
+        /// <param name="volume"> should be in sm^3 </param>
+        public static double CalculateMoles(double volume) => volume / MolarVolume;
     }
 }

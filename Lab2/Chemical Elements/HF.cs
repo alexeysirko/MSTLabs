@@ -3,6 +3,8 @@
     internal class HF
     {
         // Vm [sm^3/mole]
-        public readonly static double MolarVolume = 15.9;
+        private const double MolarVolume = 15.9;
+
+        public static double CalculateMoles(double volume) => volume / MolarVolume;
     }
 }
