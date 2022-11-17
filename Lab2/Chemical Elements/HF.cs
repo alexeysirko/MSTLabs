@@ -5,6 +5,6 @@
         // Vm [sm^3/mole]
         private const double MolarVolume = 15.9;
 
-        public static double CalculateMoles(double volume) => volume / MolarVolume;
+        public static double CalculateVolumeFromMoles(double moles) => moles * MolarVolume;
     }
 }

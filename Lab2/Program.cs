@@ -21,6 +21,7 @@ internal class Program
         }
 
         double Vsi = _substrates.VolumeInCubeSm;
+        Console.WriteLine();
         Console.WriteLine($"Объём кремния всех подложек (Vsi) [см^3] = {Vsi}");
 
         double n_Si = Si.CalculateMoles(Vsi);
@@ -33,7 +34,7 @@ internal class Program
         Console.WriteLine($"Необходимый объём (Vhno3) [см^3] = {Vhno3}");
 
         double n_HF = n_Si * (18.0 / 3);
-        double Vhf = HNO3.CalculateVolumeFromMoles(n_HF);
+        double Vhf = HF.CalculateVolumeFromMoles(n_HF);
         Console.WriteLine();
         Console.WriteLine($"Количество необходимого вещества (n_HF) [Моль] = {n_HF}");
         Console.WriteLine($"Необходимый объём (Vhf) [см^3] = {Vhf}");
