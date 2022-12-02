@@ -22,12 +22,12 @@ internal class Program
             InputManually();
         }
 
-        Tigel crusible = new(_moltenIronVolume, _ironConcentration);
+        Tigel tigel = new(_moltenIronVolume, _ironConcentration);
         Silicon silicon = new(_moltenSiliconWeight, _crystallizedPrecentageP, _crystallizedPrecentageR);
 
-        double initialIronConcentration = ConcentrationCalculator.GetInitialIronConcentrationInMelt(crusible, silicon);
-        double beginConcentrationInSolidPhase = ConcentrationCalculator.GetBeginConcentrationInSolidPhase(crusible, silicon);
-        double tailConcentrationInSolidPhase = ConcentrationCalculator.GetTailConcentrationInSolidPhase(crusible, silicon);
+        double initialIronConcentration = ConcentrationCalculator.GetInitialIronConcentrationInMelt(tigel, silicon);
+        double beginConcentrationInSolidPhase = ConcentrationCalculator.GetBeginConcentrationInSolidPhase(tigel, silicon);
+        double tailConcentrationInSolidPhase = ConcentrationCalculator.GetTailConcentrationInSolidPhase(tigel, silicon);
 
         Console.WriteLine("\nРезультаты подсчётов:");
         Console.WriteLine($"Первоначальная концентрация примеси в расплаве = {initialIronConcentration}");

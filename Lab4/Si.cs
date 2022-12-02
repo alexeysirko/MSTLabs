@@ -2,6 +2,7 @@
 
 internal class Si
 {
+    // Теплоёмкость
     private const double C = 20.16;
     private const double MolarVolume = 12.1;
 
@@ -10,6 +11,6 @@ internal class Si
 
     public static double CalculateConcentration(double volume) => volume / MolarVolume;
 
-    public static double CalculateEnergy(double concentration, double deltaTemperature)
-        => C * concentration * deltaTemperature;
+    public static double CalculateEnergy(double atomsCount, double deltaTemperature)
+        => C * atomsCount * deltaTemperature;
 }

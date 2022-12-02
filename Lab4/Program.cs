@@ -36,10 +36,10 @@ internal class Program
         double siVolume = Si.CalculateVolume(SubstrateDiameter, heightPerHour, SubstratesCount);
         Console.WriteLine($"V Si = {siVolume} см^3");
 
-        double siConcentration = Si.CalculateConcentration(siVolume);
-        Console.WriteLine($"n Si = {siConcentration}");
+        double atomsCount = Si.CalculateConcentration(siVolume);
+        Console.WriteLine($"n Si = {atomsCount}");
 
-        double energy = Si.CalculateEnergy(siConcentration, DeltaTemperature);
+        double energy = Si.CalculateEnergy(atomsCount, DeltaTemperature);
         Console.WriteLine($"Энергия, необходимая для проведения процесса роста (длительностью 1 ч) эпитаксиального слоя кремния из дихлорсилана\n = {energy} Дж");
         Console.WriteLine($"= {energy / KilowatInHour} кВ/ч");
     }
